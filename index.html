@@ -1,0 +1,12 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Esto obliga a que el enlace se abra en la misma ventana de la app
+        // y no abra el navegador externo de Android
+        e.preventDefault();
+        window.location.href = link.href;
+      });
+    });
+  });
+</script>
